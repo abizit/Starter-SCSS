@@ -20,7 +20,6 @@ module.exports = function(grunt) {
 			dist: {
 				src: 'css/layout.css',
   				dest: 'css/layout.css'
-
   			}
         },
         watch: {
