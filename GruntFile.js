@@ -1,14 +1,11 @@
 module.exports = function(grunt) {
+	require('jit-grunt')(grunt);
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
         sass: {
             options: {
                 sourceMap: true
             },
             dist: {
-				options:{
-					includePaths: require('node-bourbon').includePaths
-				},
                 files: {
                     'css/layout.css': 'scss/layout.scss'
                 }
@@ -33,8 +30,5 @@ module.exports = function(grunt) {
             }
         }
     });
-    grunt.loadNpmTasks('grunt-sass');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-postcss');
-    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('default', ['sass','postcss','watch']);
 }
