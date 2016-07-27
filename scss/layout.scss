@@ -2,57 +2,76 @@
  * Starter Scss with most used Mixins and functions
  * By: Abhijeet Bajracharya
  */
-@import "bourbon";
+@import "reset";
+
 
 // MEDIA QUERIES
-$smallmobile:     "screen and (max-width: 320px)";
-$mobile:          "screen and (max-width: 600px)";
-$tablet:          "screen and (max-width: 768px)";
+$smallmobile: "screen and (max-width: 320px)";
+$mobile: "screen and (max-width: 600px)";
+$tablet: "screen and (max-width: 768px)";
 $tabletlandscape: "screen and (min-width: 769px) and (max-width: 1024px)";
-$mobiledevice:    "screen and (max-width: 1024px)";
-$desktop:         "screen and (min-width: 1025px)";
-$smalldesktop:    "screen and (min-width: 1025px) and (max-width: 1499px)";
-$largedesktop:    "screen and (min-width: 1500px)";
-$highdensity:     "only screen and (-webkit-min-device-pixel-ratio: 1.5)",
-				  "only screen and (min--moz-device-pixel-ratio: 1.5)",
-				  "only screen and (-o-min-device-pixel-ratio: 3/2)",
-				  "only screen and (min-device-pixel-ratio: 1.5)";
+$mobiledevice: "screen and (max-width: 1024px)";
+$desktop: "screen and (min-width: 1025px)";
+$smalldesktop: "screen and (min-width: 1025px) and (max-width: 1499px)";
+$largedesktop: "screen and (min-width: 1500px)";
+$highdensity: "only screen and (-webkit-min-device-pixel-ratio: 1.5)", "only screen and (min--moz-device-pixel-ratio: 1.5)", "only screen and (-o-min-device-pixel-ratio: 3/2)", "only screen and (min-device-pixel-ratio: 1.5)";
 
 // *** Usage ***
 // @media #{$smallmobile}{
 //	body{background: #000}
 // }
 
+
 // Global Colors
-$white:#fffff1;
-$black:#000000;
+$white: #fffff1;
+$black: #000000;
 
 
 // MIXINS
-@mixin transition($range:all,$time:0.3s,$ease:ease-in-out,$delay:null){	transition: $time $range $ease $delay;}
-
-@mixin translator($x:0,$y:0) {transform: translate($x,$y);}
-
-@mixin placeholder {&::-moz-placeholder { @content; } &::-webkit-input-placeholder { @content; }&:-ms-input-placeholder { @content; }}
-
-@mixin font($family:null,$size:null,$style:null,$weight:null){font-family: $family;font-size: $size;font-style: $style;font-weight: $weight;}
-
-@mixin position($position:null,$top:null,$right:null,$bottom:null,$left:null) {	position: $position;top: $top;right: $right;bottom: $bottom;left: $left;}
-
-@mixin col($columns,$guttervalue){
-	@media #{$desktop,$tabletlandscape}{
-		float:left;
+@mixin transition($range:all,$time:0.3s,$ease:ease-in-out,$delay:null) {
+	transition: $time $range $ease $delay;
+}
+@mixin translator($x:0,$y:0) {
+	transform: translate($x,$y);
+}
+@mixin placeholder {
+	&::-moz-placeholder {
+		@content;
+	}
+	&::-webkit-input-placeholder {
+		@content;
+	}
+	&:-ms-input-placeholder {
+		@content;
+	}
+}
+@mixin font($family:null,$size:null,$style:null,$weight:null) {
+	font-family: $family;
+	font-size: $size;
+	font-style: $style;
+	font-weight: $weight;
+}
+@mixin position($position:null,$top:null,$right:null,$bottom:null,$left:null) {
+	position: $position;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+@mixin col($columns,$guttervalue) {
+	 @media #{$desktop,$tabletlandscape}{
+		float: left;
 		display: block;
 		margin-right: $guttervalue;
 		$totalgutter: ($columns - 1) * $guttervalue;
 		$gutter: $totalgutter / $columns;
 		width: calc(100% / #{$columns} - #{$gutter + px});
-		&:nth-child(#{$columns}n + #{$columns}){
+		&:nth-child(#{$columns}n + #{$columns}) {
 			margin-right: 0;
-			&:after{
+			&:after {
 				content: '';
 				width: 100%;
-				clear:both;
+				clear: both;
 				display: block;
 			}
 		}
@@ -61,87 +80,83 @@ $black:#000000;
 		width: 100%;
 	}
 }
-
 // *** Usage ***
 // .col-two {
 //   @include col (2,20px);
 // }
 
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
 
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
-.clear {clear:both;	display: block;}
+.clear {clear: both;display: block;}
 .clearfix {
-	&:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;	}
+	&:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;}
 }
-* html,* html{
+* html,* html {
 	.clearfix {height: 1%;}
 }
 .clearfix {display: block;}
-
 /*--------------------------------------------------------------
 # Box Sizing
 --------------------------------------------------------------*/
-// *,*:after,*:before {text-rendering: optimizeLegibility;	@include box-sizing(border-box);}
-
+*,*:after,*:before {text-rendering: optimizeLegibility;box-sizing: border-box}
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-$base-font: 'Fira Sans', sans-serif;;
-$headings-font : $base-font;
-$font-size-base : 16px;
-$normalweight : 300;
+$base-font: 'Fira Sans', sans-serif;
+$headings-font: $base-font;
+$font-size-base: 16px;
+$normalweight: 300;
 $boldweight: 700;
-
-$headings : h1 h2 h3 h4 h5 h6;
-$font-size-upper : 48px;
-$font-size-dec : 6px;
-
+$headings: h1 h2 h3 h4 h5 h6;
+$font-size-upper: 48px;
+$font-size-dec: 6px;
 %headingstyle {
 	@include font($weight:$boldweight,$family:$headings-font);
 	line-height: 1.3;
 }
-@each $heading in $headings{
-  #{$heading} {
-	@extend %headingstyle;
-    font-size : ($font-size-upper / $font-size-base) + em;
-	$font-size-upper : $font-size-upper - $font-size-dec;
-  }
+@each $heading in $headings {
+	#{$heading} {
+		@extend %headingstyle;
+		font-size: ($font-size-upper / $font-size-base) + em;
+		$font-size-upper: $font-size-upper - $font-size-dec;
+	}
 }
-strong,.bold{
+.bold,
+strong {
 	@extend %headingstyle;
 }
-p{
+p {
 	@include font ($size:1em);
 	line-height: 1.375;
 }
-
 /*--------------------------------------------------------------
 # Links
   --------------------------------------------------------------*/
-a{
+a {
 	@include transition();
 	text-decoration: none;
 	outline: 0;
 }
-
 /*--------------------------------------------------------------
 # Images
 --------------------------------------------------------------*/
-img{max-width: 100%; vertical-align: middle; border: 0; height: auto;
-  &.alignleft{margin-right: 10px; margin-bottom: 10px;}
-  &.alignright{margin-left: 10px; margin-bottom: 10px;}
+img {max-width: 100%;vertical-align: middle;border: 0;height: auto;
+	&.alignleft {margin-right: 10px;margin-bottom: 10px;}
+	&.alignright {margin-left: 10px;margin-bottom: 10px;}
 }
-
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
-// .pull-left,.alignleft,.floatleft{@include float-left;}
-// .pull-right,.alignright,.floatright{@include float-right;}
-a{
-	&:hover{color: #ddd;
-		transition: all ease-in-out 0.2s;
-		@include columns(12 1em);
-	}
+.pull-left,.alignleft,.floatleft{float:left;}
+.pull-right,.alignright,.floatright{float:right;}
+
+a{color: $black;
+	@include opacity(0.5);
 }
