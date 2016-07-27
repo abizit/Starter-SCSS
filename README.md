@@ -6,8 +6,8 @@ A Starter SCSS. Uses Compass and AutoPreFixer.
 
 #Author
 
-Abhijeet Bajracharya
-http://abhijeetbajracharya.com/
+[Abhijeet Bajracharya](http://abhijeetbajracharya.com/)
+
 
 
 ### Contributing
@@ -20,11 +20,11 @@ http://abhijeetbajracharya.com/
 
 ### Prerequisites
 
-1. Ruby
-2. Sass
-3. Compass
-4. Node
-5. Grunt
+1. Node
+2. Grunt
+
+
+####
 
 ## License
 
