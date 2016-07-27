@@ -32,7 +32,7 @@ $black:#000000;
 
 
 // MIXINS
-@mixin transition($range:all,$time:0.3s,$ease:ease-in-out,$delay:false){	transition: $time $range $ease $delay;}
+@mixin transition($range:all,$time:0.3s,$ease:ease-in-out,$delay:null){	transition: $time $range $ease $delay;}
 
 @mixin translator($x:0,$y:0) {transform: translate($y,$y);}
 
@@ -142,3 +142,6 @@ img{max-width: 100%; vertical-align: middle; border: 0; height: auto;
 --------------------------------------------------------------*/
 .pull-left,.alignleft,.floatleft{@include float-left;}
 .pull-right,.alignright,.floatright{@include float-right;}
+a{
+	&:hover{color: #ddd;}
+}
