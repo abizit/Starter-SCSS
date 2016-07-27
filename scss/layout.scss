@@ -2,10 +2,7 @@
  * Starter Scss with most used Mixins and functions
  * By: Abhijeet Bajracharya
  */
-
-@import "compass/reset";
-@import "compass/utilities/general";
-@import "compass/css3";
+@import "bourbon";
 
 // MEDIA QUERIES
 $smallmobile:     "screen and (max-width: 320px)";
@@ -27,7 +24,7 @@ $highdensity:     "only screen and (-webkit-min-device-pixel-ratio: 1.5)",
 // }
 
 // Global Colors
-$white:#ffffff;
+$white:#fffff1;
 $black:#000000;
 
 
@@ -86,7 +83,7 @@ $black:#000000;
 /*--------------------------------------------------------------
 # Box Sizing
 --------------------------------------------------------------*/
-*,*:after,*:before {text-rendering: optimizeLegibility;	@include box-sizing(border-box);}
+// *,*:after,*:before {text-rendering: optimizeLegibility;	@include box-sizing(border-box);}
 
 /*--------------------------------------------------------------
 # Typography
@@ -140,8 +137,11 @@ img{max-width: 100%; vertical-align: middle; border: 0; height: auto;
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
-.pull-left,.alignleft,.floatleft{@include float-left;}
-.pull-right,.alignright,.floatright{@include float-right;}
+// .pull-left,.alignleft,.floatleft{@include float-left;}
+// .pull-right,.alignright,.floatright{@include float-right;}
 a{
-	&:hover{color: #ddd;}
+	&:hover{color: #ddd;
+		transition: all ease-in-out 0.2s;
+		@include columns(12 1em);
+	}
 }

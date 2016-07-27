@@ -1,12 +1,16 @@
 module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        compass: {
+        sass: {
+            options: {
+                sourceMap: true
+            },
             dist: {
-                options: {
-                    sassDir: 'scss',
-                    cssDir: 'css',
-                    environment: 'development'
+				options:{
+					includePaths: require('node-bourbon').includePaths
+				},
+                files: {
+                    'css/layout.css': 'scss/layout.scss'
                 }
             }
         },
@@ -17,19 +21,19 @@ module.exports = function(grunt) {
                     require('autoprefixer')()
                 ]
             },
-			dist: {
-				src: 'css/layout.css',
-  				dest: 'css/layout.css'
-  			}
+            dist: {
+                src: 'css/layout.css',
+                dest: 'css/layout.css'
+            }
         },
         watch: {
             css: {
                 files: '**/*.scss',
-                tasks: ['compass', 'postcss']
+                tasks: ['sass', 'postcss']
             }
         }
     });
-    grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.registerTask('default', ['watch']);

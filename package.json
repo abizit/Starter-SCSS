@@ -1,14 +1,14 @@
 {
   "name": "ScssAutoPreFixerCompiler",
-  "version": "1",
+  "version": "1.0.1",
   "author": "Abhijeet Bajracharya",
   "private": true,
   "devDependencies": {
+    "autoprefixer": "^6.3.7",
     "grunt": "^0.4.1",
-    "grunt-contrib-compass": "^1.1.1",
-    "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-postcss": "^0.8.0",
-	"autoprefixer": "^6.3.7"
+    "grunt-sass": "^1.2.0",
+    "node-bourbon": "^4.2.8"
   }
 }
