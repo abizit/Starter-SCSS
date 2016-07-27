@@ -2,7 +2,7 @@
 
 A Starter SCSS. Uses Compass and AutoPreFixer.
 
-[![Build](https://img.shields.io/badge/Build-beta_1.0.1-blue.svg)]()
+[![Build](https://img.shields.io/badge/Build-1.2.1-blue.svg)]()
 
 #Author
 
