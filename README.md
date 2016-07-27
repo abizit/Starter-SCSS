@@ -24,7 +24,11 @@ A Starter SCSS. Uses Compass and AutoPreFixer.
 2. Grunt
 
 
-####
+#### Grunt/Node Requisitites
+1. Grunt Sass
+2. PostCSS - AutoPreFixer
+3. Node Bourbon
+4. Grunt watch
 
 ## License
 
