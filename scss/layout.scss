@@ -144,4 +144,7 @@ img{max-width: 100%; vertical-align: middle; border: 0; height: auto;
 .pull-right,.alignright,.floatright{@include float-right;}
 
 
-body{font-size: 12px}
+body{font-size: 12px; padding: 10px;
+	transition: all ease 1s;
+	display: flex
+}

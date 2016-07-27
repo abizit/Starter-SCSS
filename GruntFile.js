@@ -10,25 +10,28 @@ module.exports = function(grunt) {
                 }
             }
         },
-        autoprefixer: {
+        postcss: {
             options: {
-                map: true
+                map: true,
+                processors: [
+                    require('autoprefixer')()
+                ]
             },
-            dist: {
-                files: {
-                    'css/layout.css': 'css/layout.css'
-                }
-            }
+			dist: {
+				src: 'css/layout.css',
+  				dest: 'css/layout.css'
+
+  			}
         },
         watch: {
             css: {
                 files: '**/*.scss',
-                tasks: ['compass', 'autoprefixer']
+                tasks: ['compass', 'postcss']
             }
         }
     });
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-postcss');
     grunt.registerTask('default', ['watch']);
 }
