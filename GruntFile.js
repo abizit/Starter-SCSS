@@ -4,7 +4,8 @@ module.exports = function(grunt) {
         sass: {
             options: {
                 sourceMap: true,
-				outputStyle: 'expanded' //Values: nested, expanded, compact, compressed
+				outputStyle: 'expanded', //Values: nested, expanded, compact, compressed
+				precision : 5
             },
             dist: {
                 files: {
