@@ -66,7 +66,7 @@ $red:#e45245;
 		margin-right: $guttervalue;
 		$totalgutter: ($columns - 1) * $guttervalue;
 		$gutter: $totalgutter / $columns;
-		width: calc(100% / #{$columns} - #{$gutter + px});
+		width: calc(100% / #{$columns} - #{$gutter});
 		&:nth-child(#{$columns}n + #{$columns}) {
 			margin-right: 0;
 			&:after {
