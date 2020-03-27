@@ -1,0 +1,26 @@
+// ---------------------------------------------------------
+// @TOC
+// ---------------------------------------------------------
+
+// + @Material Color
+// + @Grey Colors
+
+// ---------------------------------------------------------
+// @Material Color
+// ---------------------------------------------------------
+
+@each $item, $color in $md-colors {
+  .c-#{$item},     .cH-#{$item}:hover      { color: $color ; }
+  .bgc-#{$item},   .bgcH-#{$item}:hover    { background-color: $color ; }
+  .bdc-#{$item},   .bdcH-#{$item}:hover    { border-color: $color ; }
+}
+
+// ---------------------------------------------------------
+// @Grey Colors
+// ---------------------------------------------------------
+
+@each $item, $color in $grey-colors-alt {
+  .c-#{$item},     .cH-#{$item}:hover      { color: $color ; }
+  .bgc-#{$item},   .bgcH-#{$item}:hover    { background-color: $color ; }
+  .bdc-#{$item},   .bdcH-#{$item}:hover    { border-color: $color ; }
+}

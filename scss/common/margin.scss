@@ -1,0 +1,264 @@
+// ---------------------------------------------------------
+// @TOC
+// ---------------------------------------------------------
+
+// + @Variables
+// + @Margin (0 > 4 Step 1)
+// + @Margin (5 > 35 Step 5)
+// + @Margin (40 > 160 Step 10)
+// + @Margin Auto
+
+// ---------------------------------------------------------
+// @Variables
+// ---------------------------------------------------------
+
+$responsive: true;
+
+// ---------------------------------------------------------
+// @Padding (0 > 4 Step 1)
+// ---------------------------------------------------------
+
+@for $i from 0 through 4 {
+  .m-#{$i}  { margin: #{$i}px ; }
+  .mT-#{$i} { margin-top: #{$i}px ; }
+  .mR-#{$i} { margin-right: #{$i}px ; }
+  .mB-#{$i} { margin-bottom: #{$i}px ; }
+  .mL-#{$i} { margin-left: #{$i}px ; }
+
+  .mY-#{$i} {
+    margin-top: #{$i}px ;
+    margin-bottom: #{$i}px ;
+  }
+
+  .mX-#{$i} {
+    margin-left: #{$i}px ;
+    margin-right: #{$i}px ;
+  }
+
+  .m-nv-#{$i}  { margin: -#{$i}px ; }
+  .mT-nv-#{$i} { margin-top: -#{$i}px ; }
+  .mR-nv-#{$i} { margin-right: -#{$i}px ; }
+  .mB-nv-#{$i} { margin-bottom:- #{$i}px ; }
+  .mL-nv-#{$i} { margin-left: -#{$i}px ; }
+
+  .mY-nv-#{$i} {
+    margin-top: -#{$i}px ;
+    margin-bottom: -#{$i}px ;
+  }
+
+  .mX-nv-#{$i} {
+    margin-left: -#{$i}px ;
+    margin-right: -#{$i}px ;
+  }
+
+  @if ($responsive == true) {
+    @include generateResponsive() {
+      .m-#{$i}\@#{$breakpointAlias}  { margin: #{$i}px ; }
+      .mT-#{$i}\@#{$breakpointAlias} { margin-top: #{$i}px ; }
+      .mR-#{$i}\@#{$breakpointAlias} { margin-right: #{$i}px ; }
+      .mB-#{$i}\@#{$breakpointAlias} { margin-bottom: #{$i}px ; }
+      .mL-#{$i}\@#{$breakpointAlias} { margin-left: #{$i}px ; }
+
+      .mY-#{$i}\@#{$breakpointAlias} {
+        margin-top: #{$i}px ;
+        margin-bottom: #{$i}px ;
+      }
+
+      .mX-#{$i}\@#{$breakpointAlias} {
+        margin-left: #{$i}px ;
+        margin-right: #{$i}px ;
+      }
+
+      .m-nv-#{$i}\@#{$breakpointAlias}  { margin: -#{$i}px ; }
+      .mT-nv-#{$i}\@#{$breakpointAlias} { margin-top: -#{$i}px ; }
+      .mR-nv-#{$i}\@#{$breakpointAlias} { margin-right: -#{$i}px ; }
+      .mB-nv-#{$i}\@#{$breakpointAlias} { margin-bottom: -#{$i}px ; }
+      .mL-nv-#{$i}\@#{$breakpointAlias} { margin-left: -#{$i}px ; }
+
+      .mY-nv-#{$i}\@#{$breakpointAlias} {
+        margin-top: -#{$i}px ;
+        margin-bottom: -#{$i}px ;
+      }
+
+      .mX-nv-#{$i}\@#{$breakpointAlias} {
+        margin-left: -#{$i}px ;
+        margin-right: -#{$i}px ;
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------------
+// @Padding (5 > 35 Step 5)
+// ---------------------------------------------------------
+
+@for $i from 5 through 35 {
+  @if $i % 5 == 0 {
+    .m-#{$i}  { margin: #{$i}px ; }
+    .mT-#{$i} { margin-top: #{$i}px ; }
+    .mR-#{$i} { margin-right: #{$i}px ; }
+    .mB-#{$i} { margin-bottom: #{$i}px ; }
+    .mL-#{$i} { margin-left: #{$i}px ; }
+
+    .mY-#{$i} {
+      margin-top: #{$i}px ;
+      margin-bottom: #{$i}px ;
+    }
+
+    .mX-#{$i} {
+      margin-left: #{$i}px ;
+      margin-right: #{$i}px ;
+    }
+
+    .m-nv-#{$i}  { margin: -#{$i}px ; }
+    .mT-nv-#{$i} { margin-top: -#{$i}px ; }
+    .mR-nv-#{$i} { margin-right: -#{$i}px ; }
+    .mB-nv-#{$i} { margin-bottom: -#{$i}px ; }
+    .mL-nv-#{$i} { margin-left: -#{$i}px ; }
+
+    .mY-nv-#{$i} {
+      margin-top: -#{$i}px ;
+      margin-bottom: -#{$i}px ;
+    }
+
+    .mX-nv-#{$i} {
+      margin-left: -#{$i}px ;
+      margin-right: -#{$i}px ;
+    }
+
+    @if ($responsive == true) {
+      @include generateResponsive() {
+        .m-#{$i}\@#{$breakpointAlias}  { margin: #{$i}px ; }
+        .mT-#{$i}\@#{$breakpointAlias} { margin-top: #{$i}px ; }
+        .mR-#{$i}\@#{$breakpointAlias} { margin-right: #{$i}px ; }
+        .mB-#{$i}\@#{$breakpointAlias} { margin-bottom: #{$i}px ; }
+        .mL-#{$i}\@#{$breakpointAlias} { margin-left: #{$i}px ; }
+
+        .mY-#{$i}\@#{$breakpointAlias} {
+          margin-top: #{$i}px ;
+          margin-bottom: #{$i}px ;
+        }
+
+        .mX-#{$i}\@#{$breakpointAlias} {
+          margin-left: #{$i}px ;
+          margin-right: #{$i}px ;
+        }
+
+        .m-nv-#{$i}\@#{$breakpointAlias}  { margin: -#{$i}px ; }
+        .mT-nv-#{$i}\@#{$breakpointAlias} { margin-top: -#{$i}px ; }
+        .mR-nv-#{$i}\@#{$breakpointAlias} { margin-right: -#{$i}px ; }
+        .mB-nv-#{$i}\@#{$breakpointAlias} { margin-bottom: -#{$i}px ; }
+        .mL-nv-#{$i}\@#{$breakpointAlias} { margin-left: -#{$i}px ; }
+
+        .mY-nv-#{$i}\@#{$breakpointAlias} {
+          margin-top: -#{$i}px ;
+          margin-bottom: -#{$i}px ;
+        }
+
+        .mX-nv-#{$i}\@#{$breakpointAlias} {
+          margin-left: -#{$i}px ;
+          margin-right: -#{$i}px ;
+        }
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------------
+// @Padding (40 > 160 Step 10)
+// ---------------------------------------------------------
+
+@for $i from 40 through 160 {
+  @if $i % 10 == 0 {
+
+    .m-#{$i}  { margin: #{$i}px ; }
+    .mT-#{$i} { margin-top: #{$i}px ; }
+    .mR-#{$i} { margin-right: #{$i}px ; }
+    .mB-#{$i} { margin-bottom: #{$i}px ; }
+    .mL-#{$i} { margin-left: #{$i}px ; }
+
+    .mY-#{$i} {
+      margin-top: #{$i}px ;
+      margin-bottom: #{$i}px ;
+    }
+
+    .mX-#{$i} {
+      margin-left: #{$i}px ;
+      margin-right: #{$i}px ;
+    }
+
+    .m-nv-#{$i}  { margin: -#{$i}px ; }
+    .mT-nv-#{$i} { margin-top: -#{$i}px ; }
+    .mR-nv-#{$i} { margin-right: -#{$i}px ; }
+    .mB-nv-#{$i} { margin-bottom: -#{$i}px ; }
+    .mL-nv-#{$i} { margin-left: -#{$i}px ; }
+
+    .mY-nv-#{$i} {
+      margin-top: -#{$i}px ;
+      margin-bottom: -#{$i}px ;
+    }
+
+    .mX-nv-#{$i} {
+      margin-left: -#{$i}px ;
+      margin-right: -#{$i}px ;
+    }
+
+    @if ($responsive == true) {
+      @include generateResponsive() {
+        .m-#{$i}\@#{$breakpointAlias}  { margin: #{$i}px ; }
+        .mT-#{$i}\@#{$breakpointAlias} { margin-top: #{$i}px ; }
+        .mR-#{$i}\@#{$breakpointAlias} { margin-right: #{$i}px ; }
+        .mB-#{$i}\@#{$breakpointAlias} { margin-bottom: #{$i}px ; }
+        .mL-#{$i}\@#{$breakpointAlias} { margin-left: #{$i}px ; }
+
+        .mY-#{$i}\@#{$breakpointAlias} {
+          margin-top: #{$i}px ;
+          margin-bottom: #{$i}px ;
+        }
+
+        .mX-#{$i}\@#{$breakpointAlias} {
+          margin-left: #{$i}px ;
+          margin-right: #{$i}px ;
+        }
+
+        .m-nv-#{$i}\@#{$breakpointAlias}  { margin: -#{$i}px ; }
+        .mT-nv-#{$i}\@#{$breakpointAlias} { margin-top: -#{$i}px ; }
+        .mR-nv-#{$i}\@#{$breakpointAlias} { margin-right: -#{$i}px ; }
+        .mB-nv-#{$i}\@#{$breakpointAlias} { margin-bottom: -#{$i}px ; }
+        .mL-nv-#{$i}\@#{$breakpointAlias} { margin-left: -#{$i}px ; }
+
+        .mY-nv-#{$i}\@#{$breakpointAlias} {
+          margin-top: -#{$i}px ;
+          margin-bottom: -#{$i}px ;
+        }
+
+        .mX-nv-#{$i}\@#{$breakpointAlias} {
+          margin-left: -#{$i}px ;
+          margin-right: -#{$i}px ;
+        }
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------------
+// @Padding Auto
+// ---------------------------------------------------------
+
+.m-a  { margin: auto ; }
+.mX-a { margin-left: auto ; margin-right: auto ; }
+.mT-a { margin-top: auto ; }
+.mR-a { margin-right: auto ; }
+.mB-a { margin-bottom: auto ; }
+.mL-a { margin-left: auto ; }
+
+@if ($responsive == true) {
+  @include generateResponsive() {
+    .m-a\@#{$breakpointAlias}  { margin: auto ; }
+    .mX-a\@#{$breakpointAlias} { margin-left: auto ; margin-right: auto ; }
+    .mT-a\@#{$breakpointAlias} { margin-top: auto ; }
+    .mR-a\@#{$breakpointAlias} { margin-right: auto ; }
+    .mB-a\@#{$breakpointAlias} { margin-bottom: auto ; }
+    .mL-a\@#{$breakpointAlias} { margin-left: auto ; }
+  }
+}

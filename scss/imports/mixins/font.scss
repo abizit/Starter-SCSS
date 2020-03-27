@@ -1,0 +1,12 @@
+@mixin font($f:null,$s:null,$st:null,$w:null) {
+  font-family: $f;
+  font-size: $s;
+  font-style: $st;
+  font-weight: $w;
+}
+
+@mixin text($t:null,$d:null,$a:null) {
+  text-transform: $t;
+  text-align: $a;
+  text-decoration: $d;
+}

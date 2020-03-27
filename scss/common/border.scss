@@ -1,0 +1,75 @@
+// ---------------------------------------------------------
+// @TOC
+// ---------------------------------------------------------
+
+// + @Quick Border Helpers
+// + @Border Width
+// + @Border Radius
+// + @Border Style
+
+// ---------------------------------------------------------
+// @Quick Border Helpers
+// ---------------------------------------------------------
+
+.bd  { border: #{$border-width} solid #{$border-color}; }
+.bdT { border-top: #{$border-width} solid #{$border-color}; }
+.bdR { border-right: #{$border-width} solid #{$border-color}; }
+.bdB { border-bottom: #{$border-width} solid #{$border-color}; }
+.bdL { border-left: #{$border-width} solid #{$border-color} ; }
+
+// ---------------------------------------------------------
+// @Border Width
+// ---------------------------------------------------------
+
+@for $i from 0 through 5 {
+  .bdw-#{$i}  { border-width: #{$i}px ; }
+  .bdwT-#{$i} { border-top-width: #{$i}px ; }
+  .bdwR-#{$i} { border-right-width: #{$i}px ; }
+  .bdwB-#{$i} { border-bottom-width: #{$i}px ; }
+  .bdwL-#{$i} { border-left-width: #{$i}px ; }
+}
+
+// ---------------------------------------------------------
+// @Border Radius
+// ---------------------------------------------------------
+
+@for $i from 0 to 5 {
+  .bdrs-#{$i} { border-radius: #{$i}px ; }
+
+  .bdrsT-#{$i} {
+    border-top-left-radius: #{$i}px ;
+    border-top-right-radius: #{$i}px ;
+  }
+
+  .bdrsR-#{$i} {
+    border-top-right-radius: #{$i}px ;
+    border-bottom-right-radius: #{$i}px ;
+  }
+
+  .bdrsB-#{$i} {
+    border-bottom-left-radius: #{$i}px ;
+    border-bottom-right-radius: #{$i}px ;
+  }
+
+  .bdrsL-#{$i} {
+    border-top-left-radius: #{$i}px ;
+    border-bottom-left-radius: #{$i}px ;
+  }
+}
+
+.bdrs-50p  { border-radius: 50% ; }
+.bdrs-10em { border-radius: 10em ; }
+
+// ---------------------------------------------------------
+// @Border Style
+// ---------------------------------------------------------
+
+.bds-n  { border-style: none ; }
+.bds-s  { border-style: solid ; }
+.bds-dt { border-style: dotted ; }
+.bds-ds { border-style: dashed ; }
+.bds-db { border-style: double ; }
+.bds-g  { border-style: groove ; }
+.bds-r  { border-style: ridge ; }
+.bds-i  { border-style: inset ; }
+.bds-o  { border-style: outset ; }

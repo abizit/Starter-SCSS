@@ -9,7 +9,7 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'css/layout.css': 'scss/layout.scss'
+                    'style.css': 'style.scss'
                 }
             }
         },
@@ -21,16 +21,23 @@ module.exports = function(grunt) {
                 ]
             },
             dist: {
-                src: 'css/layout.css',
-                dest: 'css/layout.css'
+                src: 'style.css',
+                dest: 'style.css'
+            }
+        },
+        csscomb: {
+            dist: {
+                files: {
+                    'style.css': ['style.css']
+                }
             }
         },
         watch: {
             css: {
                 files: '**/*.scss',
-                tasks: ['sass', 'postcss']
+                tasks: ['sass', 'postcss','csscomb']
             }
         }
     });
-    grunt.registerTask('default', ['sass','postcss','watch']);
+    grunt.registerTask('default', ['sass','postcss','csscomb','watch']);
 }

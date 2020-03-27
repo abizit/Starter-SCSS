@@ -1,0 +1,145 @@
+// ---------------------------------------------------------
+// @TOC
+// ---------------------------------------------------------
+
+// + @Variables
+// + @Padding (0 > 4 Step 1)
+// + @Padding (5 > 35 Step 5)
+// + @Padding (40 > 160 Step 10)
+// + @Padding Auto
+
+// ---------------------------------------------------------
+// @Variables
+// ---------------------------------------------------------
+
+$responsive: true;
+
+// ---------------------------------------------------------
+// @Padding (0 > 4 Step 1)
+// ---------------------------------------------------------
+
+@for $i from 0 through 4 {
+  .p-#{$i}  { padding: #{$i}px ; }
+  .pT-#{$i} { padding-top: #{$i}px ; }
+  .pR-#{$i} { padding-right: #{$i}px ; }
+  .pB-#{$i} { padding-bottom: #{$i}px ; }
+  .pL-#{$i} { padding-left: #{$i}px ; }
+
+  .pY-#{$i} {
+    padding-top: #{$i}px ;
+    padding-bottom: #{$i}px ;
+  }
+
+  .pX-#{$i} {
+    padding-left: #{$i}px ;
+    padding-right: #{$i}px ;
+  }
+
+  @if ($responsive == true) {
+    @include generateResponsive() {
+      .p-#{$i}\@#{$breakpointAlias}  { padding: #{$i}px ; }
+      .pT-#{$i}\@#{$breakpointAlias} { padding-top: #{$i}px ; }
+      .pR-#{$i}\@#{$breakpointAlias} { padding-right: #{$i}px ; }
+      .pB-#{$i}\@#{$breakpointAlias} { padding-bottom: #{$i}px ; }
+      .pL-#{$i}\@#{$breakpointAlias} { padding-left: #{$i}px ; }
+
+      .pY-#{$i}\@#{$breakpointAlias} {
+        padding-top: #{$i}px ;
+        padding-bottom: #{$i}px ;
+      }
+
+      .pX-#{$i}\@#{$breakpointAlias} {
+        padding-left: #{$i}px ;
+        padding-right: #{$i}px ;
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------------
+// @Padding (5 > 35 Step 5)
+// ---------------------------------------------------------
+
+@for $i from 5 through 35 {
+  @if $i % 5 == 0 {
+    .p-#{$i}  { padding: #{$i}px ; }
+    .pT-#{$i} { padding-top: #{$i}px ; }
+    .pR-#{$i} { padding-right: #{$i}px ; }
+    .pB-#{$i} { padding-bottom: #{$i}px ; }
+    .pL-#{$i} { padding-left: #{$i}px ; }
+
+    .pY-#{$i} {
+      padding-top: #{$i}px ;
+      padding-bottom: #{$i}px ;
+    }
+
+    .pX-#{$i} {
+      padding-left: #{$i}px ;
+      padding-right: #{$i}px ;
+    }
+
+    @if ($responsive == true) {
+      @include generateResponsive() {
+        .p-#{$i}\@#{$breakpointAlias}  { padding: #{$i}px ; }
+        .pT-#{$i}\@#{$breakpointAlias} { padding-top: #{$i}px ; }
+        .pR-#{$i}\@#{$breakpointAlias} { padding-right: #{$i}px ; }
+        .pB-#{$i}\@#{$breakpointAlias} { padding-bottom: #{$i}px ; }
+        .pL-#{$i}\@#{$breakpointAlias} { padding-left: #{$i}px ; }
+
+        .pY-#{$i}\@#{$breakpointAlias} {
+          padding-top: #{$i}px ;
+          padding-bottom: #{$i}px ;
+        }
+
+        .pX-#{$i}\@#{$breakpointAlias} {
+          padding-left: #{$i}px ;
+          padding-right: #{$i}px ;
+        }
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------------
+// @Padding (40 > 160 Step 10)
+// ---------------------------------------------------------
+
+@for $i from 40 through 160 {
+  @if $i % 10 == 0 {
+    .p-#{$i}  { padding: #{$i}px ; }
+    .pT-#{$i} { padding-top: #{$i}px ; }
+    .pR-#{$i} { padding-right: #{$i}px ; }
+    .pB-#{$i} { padding-bottom: #{$i}px ; }
+    .pL-#{$i} { padding-left: #{$i}px ; }
+
+    .pY-#{$i} {
+      padding-top: #{$i}px ;
+      padding-bottom: #{$i}px ;
+    }
+
+    .pX-#{$i} {
+      padding-left: #{$i}px ;
+      padding-right: #{$i}px ;
+    }
+
+    @if ($responsive == true) {
+      @include generateResponsive() {
+        .p-#{$i}\@#{$breakpointAlias}  { padding: #{$i}px ; }
+        .pT-#{$i}\@#{$breakpointAlias} { padding-top: #{$i}px ; }
+        .pR-#{$i}\@#{$breakpointAlias} { padding-right: #{$i}px ; }
+        .pB-#{$i}\@#{$breakpointAlias} { padding-bottom: #{$i}px ; }
+        .pL-#{$i}\@#{$breakpointAlias} { padding-left: #{$i}px ; }
+
+        .pY-#{$i}\@#{$breakpointAlias} {
+          padding-top: #{$i}px ;
+          padding-bottom: #{$i}px ;
+        }
+
+        .pX-#{$i}\@#{$breakpointAlias} {
+          padding-left: #{$i}px ;
+          padding-right: #{$i}px ;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+// ---------------------------------------------------------
+// @TOC
+// ---------------------------------------------------------
+
+// + @Variables
+// + @Display
+// + @Overflow
+// + @Float
+// + @Vertical Align
+// + @Position
+// + @Z-Index
+
+// ---------------------------------------------------------
+// @Variables
+// ---------------------------------------------------------
+
+$responsive: true;
+
+// ---------------------------------------------------------
+// @Display
+// ---------------------------------------------------------
+
+.d-b          { display: block ; }
+.d-ib         { display: inline-block ; }
+.d-i          { display: inline ; }
+.d-tb         { display: table ; }
+.d-tbc        { display: table-cell ; }
+.d-n          { display: none ; }
+
+@if ($responsive == true) {
+  @include generateResponsive() {
+    .d-b\@#{$breakpointAlias}      { display: block ; }
+    .d-ib\@#{$breakpointAlias}     { display: inline-block ; }
+    .d-i\@#{$breakpointAlias}      { display: inline ; }
+    .d-tb\@#{$breakpointAlias}     { display: table ; }
+    .d-tbc\@#{$breakpointAlias}    { display: table-cell ; }
+    .d-n\@#{$breakpointAlias}      { display: none ; }
+  }
+}
+
+// ---------------------------------------------------------
+// @Overflow
+// ---------------------------------------------------------
+
+.ov-h         { overflow: hidden ; }
+.ov-a         { overflow: auto ; }
+.ov-s         { overflow: scroll ; }
+
+.ovY-h        { overflow-y: hidden ; }
+.ovX-h        { overflow-x: hidden ; }
+.ovY-a        { overflow-y: auto ; }
+.ovX-a        { overflow-x: auto ; }
+.ovY-s        { overflow-y: scroll ; }
+.ovX-s        { overflow-x: scroll ; }
+
+@if ($responsive == true) {
+  @include generateResponsive() {
+    .ov-h\@#{$breakpointAlias}     { overflow: hidden ; }
+    .ov-a\@#{$breakpointAlias}     { overflow: auto ; }
+    .ov-s\@#{$breakpointAlias}     { overflow: scroll ; }
+
+    .ovY-h\@#{$breakpointAlias}    { overflow-y: hidden ; }
+    .ovX-h\@#{$breakpointAlias}    { overflow-x: hidden ; }
+    .ovY-a\@#{$breakpointAlias}    { overflow-y: auto ; }
+    .ovX-a\@#{$breakpointAlias}    { overflow-x: auto ; }
+    .ovY-s\@#{$breakpointAlias}    { overflow-y: scroll ; }
+    .ovX-s\@#{$breakpointAlias}    { overflow-x: scroll ; }
+  }
+}
+
+// ---------------------------------------------------------
+// @Float
+// ---------------------------------------------------------
+
+.fl-l         { float: left ; }
+.fl-r         { float: right ; }
+.fl-n         { float: none ; }
+
+@if ($responsive == true) {
+  @include generateResponsive() {
+    .fl-l\@#{$breakpointAlias}     { float: left ; }
+    .fl-r\@#{$breakpointAlias}     { float: right ; }
+    .fl-n\@#{$breakpointAlias}     { float: none ; }
+  }
+}
+
+// ---------------------------------------------------------
+// @Vertical Align
+// ---------------------------------------------------------
+
+.va-t         { vertical-align: top ; }
+.va-m         { vertical-align: middle ; }
+.va-b         { vertical-align: bottom ; }
+
+@if ($responsive == true) {
+  @include generateResponsive() {
+    .va-t\@#{$breakpointAlias}     { vertical-align: top ; }
+    .va-m\@#{$breakpointAlias}     { vertical-align: middle ; }
+    .va-b\@#{$breakpointAlias}     { vertical-align: bottom ; }
+  }
+}
+
+// ---------------------------------------------------------
+// @Position
+// ---------------------------------------------------------
+
+.pos-s        { position: static ; }
+.pos-st       { position: sticky ; }
+.pos-r        { position: relative ; }
+.pos-a        { position: absolute ; }
+.pos-f        { position: fixed ; }
+
+@if ($responsive == true) {
+  @include generateResponsive() {
+    .pos-s\@#{$breakpointAlias}    { position: static ; }
+    .pos-st\@#{$breakpointAlias}   { position: sticky ; }
+    .pos-r\@#{$breakpointAlias}    { position: relative ; }
+    .pos-a\@#{$breakpointAlias}    { position: absolute ; }
+    .pos-f\@#{$breakpointAlias}    { position: fixed ; }
+  }
+}
+
+// ---------------------------------------------------------
+// @Z-Index
+// ---------------------------------------------------------
+
+@for $i from 0 through 9 {
+  .z-#{$i} { z-index: ($i * 1000) ; }
+
+  @if ($responsive == true) {
+    @include generateResponsive() {
+      .z-#{$i}\@#{$breakpointAlias} { z-index: ($i * 1000) ; }
+    }
+  }
+}
