@@ -1,7 +1,7 @@
 ## Starter SCSS
 
 A Starter SCSS.
-With basic layout grid and other user full utilities
+With basic layout grid and other useful utilities
 
 [![Build](https://img.shields.io/badge/Build-2.0.0-blue.svg)]()
 
