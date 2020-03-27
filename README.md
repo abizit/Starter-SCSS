@@ -1,14 +1,9 @@
 ## Starter SCSS
 
-A Starter SCSS. Uses Compass and AutoPreFixer.
+A Starter SCSS.
+With basic layout grid and other user full utilities
 
-[![Build](https://img.shields.io/badge/Build-1.2.1-blue.svg)]()
-
-#Author
-
-[Abhijeet Bajracharya](http://abhijeetbajracharya.com/)
-
-
+[![Build](https://img.shields.io/badge/Build-2.0.0-blue.svg)]()
 
 ### Contributing
 
@@ -22,13 +17,6 @@ A Starter SCSS. Uses Compass and AutoPreFixer.
 
 1. Node
 2. Grunt
-
-
-#### Grunt/Node Requisitites
-1. Grunt Sass
-2. PostCSS - AutoPreFixer
-3. Node Bourbon
-4. Grunt watch
 
 ## License
 
