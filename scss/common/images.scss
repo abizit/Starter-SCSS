@@ -1,0 +1,8 @@
+/*--------------------------------------------------------------
+# Images
+--------------------------------------------------------------*/
+img {max-width: 100%;vertical-align: middle;border: 0;
+  &.alignleft {margin-right: 20px;margin-bottom: 20px;}
+  &.alignright {margin-left: 20px;margin-bottom: 20px;}
+  &.aligncenter{display: inherit;margin: auto;}
+}

@@ -1,4 +1,6 @@
 $font-primary:
-  Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  Roboto, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif !default;
 $font-secondary: $font-primary;
 $font-size-base:              0.875rem;
+$font-size-upper: $font-size-base * 3;
+$font-size-dec: 0.375rem;

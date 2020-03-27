@@ -1,0 +1,21 @@
+a {
+  color: $default-info;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: darken($default-info, 10%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.text-gray {
+    &:hover,
+    &:focus,
+    &.active {
+      color: $default-dark !important;
+    }
+  }
+}
